@@ -1,0 +1,12 @@
+.title-validation{
+    display: none;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error-message{
+    color: red;
+    font-weight: 300;
+    font-size: x-small;
+}
