@@ -8,5 +8,46 @@
 .error-message{
     color: red;
     font-weight: 300;
-    font-size: x-small;
+    font-size:small;
 }
+.text-control.input-error{
+    border: solid 3px red;
+}
+.checkbox-icon.input-error{
+    outline: 3px solid red;
+}
+ /* */
+ .text-control.input-valid {
+    border: 3px solid green;
+  }
+  /* .input-error {
+    border: 2px solid #fe142f;
+ }  */
+ .not-active {
+    transform: scale(0);
+  }
+  .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .message-valid p {
+    text-align: center;
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 260px;
+    /* height: 50vh; */
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  @media screen and (max-width: 800px) {
+    .content{
+        width: 100%;
+    }
+    .message-valid p {
+        height: 60vh;
+      }
+  }
