@@ -87,7 +87,6 @@ function checkCu() {
 // 
 // quantité fonction
 // 
-// console.log(parseInt(quantity.value) != Number);
 function checkQuantity() {
     if (!quantity.value ) {
         getError(quantity, "Veuillez renseigner a combien de tournois avez-vous déjà participé.")
@@ -138,17 +137,6 @@ function getErrorCheckboxCU(input,message) {
     span.className = 'msg error-message'
     checkBoxStyle.className = 'checkbox-icon input-error'
 }
-// // Remettre à zero contenu lors de la fermeture du modal
-// function delMsgError() {
-//     const errorMsg = document.querySelectorAll('.error-message')
-//     const errorInput = document.querySelectorAll('.input-error')
-//     for (let i = 0; i < errorMsg.length; i++) {
-//         errorMsg[i].classList.remove("error-message")
-//         errorMsg[i].classList = "msg"
-//         errorMsg[i].innerText = ' '
-//         errorInput[i].classList.remove("input-error")
-//     }
-// }
 // 
 // Etape4 Gestion Validation Formulaire
 // 
