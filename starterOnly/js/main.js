@@ -29,7 +29,7 @@ const radioCheck = document.querySelector('input[name = "location"]:checked');
 // 
 // Firstname / lastname fonction
 // 
-function ValidFirstName() {
+function validFirstName() {
     if (!first.value) {
         getError(first, "Veuillez renseigner un Prénom valide.")
         // console.log("Veuillez renseigner un Prénom valide.");
@@ -39,7 +39,7 @@ function ValidFirstName() {
         return true
     }
 }
-function ValidlastName() {
+function validlastName() {
     if (!last.value) {
         getError(last, "Veuillez renseigner un Nom valide.")
         // console.log("Veuillez renseigner un Prénom valide.");
@@ -52,7 +52,7 @@ function ValidlastName() {
 // 
 // Email fonction
 // 
-function ValidEmail() {
+function validEmail() {
     const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     if (!email.value) {
         getError(email, "Veuillez renseigner un Email valide.")
@@ -65,7 +65,7 @@ function ValidEmail() {
 // 
 // BirthDate fonction
 // 
-function ValidBirthdate() {
+function validBirthdate() {
     if (!birthdate.value) {
         getError(birthdate, "Veuillez entrer votre date de naissance.");
         return false;
@@ -76,7 +76,7 @@ function ValidBirthdate() {
 // 
 // CU fonction
 // 
-function ValidationCu() {
+function validationCu() {
     if (!CU.checked) {
         getErrorCheckboxCU("Veuillez cocher la case \"conditions d'utilisation\".");
     } else {
@@ -142,14 +142,14 @@ function delMsgError() {
 // 
 // Etape5 Validation Formulaire
 // 
-function validate(e) {
-    e.preventDefault();
+function validate() {
+    
 
-    ValidFirstName()
-    ValidlastName()
-    ValidEmail()
-    ValidBirthdate()
+    validFirstName()
+    validlastName()
+    validEmail()
+    validBirthdate()
     validationQuantity()
-    ValidationCu()
+    validationCu()
     validLocation()
 }
