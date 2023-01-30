@@ -7,6 +7,7 @@ closebtn.addEventListener("click", () => {
     bground.style.display = "none"    
 })
 
+
 /* Gestion Formulaire Inscription */
 // Variobles
 const regexName = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/;
@@ -64,6 +65,23 @@ function checkEmail() {
 // 
 // BirthDate fonction
 // 
+document.addEventListener('DOMContentLoaded', maxBirthdate);
+function maxBirthdate() {
+    let date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() +1;
+    let year = date.getUTCFullYear();
+    //condition day 1 à 9 => 01 à 09
+    if (day < 10) {
+      day = '0' + day;
+    } 
+    //condition month 1 à 9 => 01 à 09
+    if (month < 10) {
+      month = '0' + month;
+    }
+    maxDate = year + "-" + month + "-" + day;
+    birthdate.setAttribute('max', maxDate);
+  }
 function checkBirthdate() {
     if (!birthdate.value) {
         getError(birthdate, "Veuillez entrer votre date de naissance.");
